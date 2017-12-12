@@ -1,0 +1,6 @@
+#studentGroupReport th,
+#studentGroupReport td
+    { border: 1px solid #000; padding: 0.5em; background-color: #fff; }
+.arName { background-color: #ccc; text-align: left; }
+.redFlag td { background-color: #fcc; }
+#studentGroupReportLegend dt { font-weight: bold; }

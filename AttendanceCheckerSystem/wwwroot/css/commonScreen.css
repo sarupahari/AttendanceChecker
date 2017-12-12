@@ -1,0 +1,47 @@
+body { font-family: Arial,Verdana,Helvetica,sans-serif; background-color: #660000; font-size: 14pt; }
+#branding img { border: none; }
+#betweenMargins { margin-left: 10%; margin-right: 10%; }
+#mainContent { background-color: #fff; padding: 1em; }
+#footer { line-height: 150%; color: #fff; font-size: 80%; text-align: center; }
+#footer li { list-style: none; display: inline; border-right: 1px solid #ffffff; border-left: 1px solid #ffffff; padding-left: 0.5em; padding-right: 0.5em; }
+#footer li a { color: #fff; }
+#testDisclaimer { border: 3px solid #f00; margin: 1em; padding: 1em; }
+
+#navArr li,
+.navArr li
+    { list-style: none; margin-left: 1em; display: inline-block; }
+
+ul.errList li { color: #600; }
+span.errList { color: #600; display: block; margin-left: 3em; font-weight: bold; }
+input, select, textarea { border: 1px solid #999; -moz-box-sizing: border-box; box-sizing: border-box; background-color: #fff; }
+input:focus, select:focus, textarea:focus { border-color: #000; }
+input:valid, select:valid, textarea:valid { border-color: green; }
+input:invalid, select:invalid, textarea:invalid { border-color: red; }
+textarea { width: 80%; }
+
+#skip a {
+    position: absolute; top: -999999px; left: 0;  padding: 0.5em; background: transparent;
+    -webkit-transition: top 1s ease-out, background 1s linear;
+    transition: top 1s ease-out, background 1s linear;
+}
+#skip a:focus {
+    background: #fff; position: absolute; left: 0; top: 0; z-index: 100;
+    -webkit-transition: top .1s ease-in, background .5s linear;
+    transition: top .1s ease-in, background .5s linear;
+}
+.offscreen
+    { position: absolute; top: -999999px; left: auto; width: 1px; height: 1px; overflow: hidden; }
+.mobileOnly, .printOnly { display: none; }
+
+form dd { margin-bottom: 0.5em; }
+.elementContainer { margin-bottom: 0.5em; margin-left: 2em; }
+span.after { font-size: 90%; color: #00f; margin-left: 1em; }
+span.before { font-size: 90%; color: #00f; display: block; }
+
+#flashMsg, #errMsg, #errorMsg { margin: 1em; padding: 1em; font-weight: bold; border-width: 3px; border-style: solid; }
+#flashMsg { border-color: #00f; }
+#errorMsg, #errMsg { border-color: #f00; }
+
+.nafwreq::before { content: '* '; }
+#nafwErrorSummary { margin: 1em; padding: 1em; border: 3px solid #f00; }
+

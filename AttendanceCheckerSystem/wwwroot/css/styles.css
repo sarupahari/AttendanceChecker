@@ -1,0 +1,46 @@
+.mdate, .mattendee { font-family: monospace; }
+#courseSummary td,
+#courseSummary th
+    { border: 1px solid #000; padding: 0.5em; }
+#studentGroupReport th,
+#studentGroupReport td
+    { border: 1px solid #000; padding: 0.5em; background-color: #fff; }
+.arName { background-color: #ccc; text-align: left; }
+#studentGroupReport .redFlag td { background-color: #fcc; }
+#studentGroupReportLegend dt { font-weight: bold; }
+ol.enrolled li
+    { padding: 0.5em; margin: 0.5em; border: 1px solid #000; }
+ol.enrolled li img
+    { margin-right: 0.5em; }
+ol.enrolled li span.studentLink,
+ol.enrolled li span.attendanceNotation
+    { display: inline-block; width: 25%; }
+ol.enrolled li span.attendanceNotation { vertical-align: top; }
+#courseAttendanceTitle { float: left; }
+#courseAttendancePhoto { float: right; }
+
+.checkboxContainer { border: 1px solid #000; display: inline-block; margin: 0.2em; padding: 0.5em; }
+img.photoTransparent { opacity: 0.7; filter: alpha(opacity=70); }
+#amendForm input[type='submit'] { background-color: #0c570c; color: #fff; font-weight: bold; border: 3px solid #000; }
+#doAllButtons { display: none; text-align: right; }
+#doAllButtons button { margin: 0.5em; }
+#doAllButtons #setAll { background: #0c570c; color: #fff; font-weight: bold; border: 3px solid #000; }
+#doAllButtons #clearAll { background: #b11200; color: #fff; font-weight: bold; border: 3px solid #000; }
+#doAllButtons #revertRoll { background: #1347a8; color: #fff; font-weight: bold; border: 3px solid #000; }
+
+#doAllButtons strong { color: #b11200; }
+
+.debugTable { margin-bottom: 1em; }
+.debugTable th,
+.debugTable td
+    { border: 1px solid #000; padding: 0.5em; }
+#debugForm { padding: 1em; margin: 1em; border: 1px solid #000; }
+#debugForm #date { margin-right: 1em; }
+
+#roomReportForm #sdate,
+#roomReportForm #edate
+    { margin-right: 1em; }
+
+#bannerImageContainer { display: none; height: 138px; }
+@media (min-width: 840px) and (max-width: 1440px) { #bannerImageContainer { display: block; } }
+

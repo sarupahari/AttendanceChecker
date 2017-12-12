@@ -1,0 +1,42 @@
+﻿@model AttendanceViewModel
+@{
+    ViewData["Title"] = "Home Page";
+
+    List<SelectListItem> meetingDropdownData = new List<SelectListItem>();
+
+    var meetingList = (IEnumerable<Meeting>)ViewData["MeetingList"];
+    foreach (var day in meetingList)
+    {
+        meetingDropdownData.Add(new SelectListItem()
+        {
+            Text = day.MeetingDay.ToLongDateString(),
+            Value = day.ID.ToString()
+        });
+    }
+
+    List<SelectListItem> studentDropdownData = new List<SelectListItem>();
+
+    var studentList = (IEnumerable<Student>)ViewData["StudentList"];
+    foreach (var student in studentList)
+    {
+        studentDropdownData.Add(new SelectListItem()
+        {
+            Text = student.LastName + ", " + student.FirstMidName,
+            Value = student.ID.ToString()
+        });
+    }
+
+}
+
+<div>
+    <div>
+        <h2>Today is: @DateTime.Now.ToLocalTime().ToLongDateString()</h2>
+    </div>
+    <form asp-controller="Meetings" asp-action="Attend" method="post">
+        @Html.DropDownListFor(s => s.StudentID, studentDropdownData)
+        <br />
+        @Html.DropDownListFor(m => m.MeetingID, meetingDropdownData)
+        <br />
+        <input type="submit" value="submit" title="Attend" />
+    </form>
+</div>

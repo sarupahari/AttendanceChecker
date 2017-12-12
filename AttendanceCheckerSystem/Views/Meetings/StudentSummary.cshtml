@@ -1,0 +1,59 @@
+﻿@model IEnumerable<StudentSummaryDetailViewModel>
+
+@{
+    ViewData["Title"] = "Student Summary";
+   
+}
+
+<h4>CIDM 3312 01 : @ViewData["StudentInfo"]</h4>
+@ViewData["StudentPhoto"]
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Meeting.MeetingDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meeting.MeetingLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attend)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var ad in Model)
+        {
+        <tr>
+            <td>
+                <span class="mdate">
+                    @ad.Meeting.MeetingDay.ToLongDateString()
+                </span>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => ad.Meeting.MeetingLocation)
+            </td>
+            <td>
+                @if (ad.Attend.Attend)
+                {
+                    <span class="attendanceNotation">attended</span>
+                    
+                }
+                else
+                {
+                    <span class="attendanceNotation">absent</span>
+                   
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

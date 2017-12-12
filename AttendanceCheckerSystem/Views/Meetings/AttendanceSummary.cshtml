@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AttendanceSummaryViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "AttendanceSummary";
+}
+
+@*<h2>AttendanceSummary</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimesPresent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimesAbsent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttendancePercentage)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+            @foreach (var item in Model)
+                {
+                 <tr>
+                     <td>
+                         <span class="mattendee">
+                             <a asp-action="AttendanceSummary"></a>
+                             @item.Student.ID
+                         @item.Student.FirstMidName, @item.Student.LastName
+                     </span>
+
+                     <img src="@item.Student.BuffIDPhoto" width="100" alt="photo of @item.Student.FirstMidName @item.Student.LastName" class="studentPhoto" />
+                     </td>
+                     <td>
+                        @item.TimesPresent
+                     </td>
+                     <td>
+                         @item.TimesAbsent
+                     </td>
+                     <td>
+                         @item.AttendancePercentage
+                     </td>
+
+                </tr>
+
+            }
+
+    </table>*@

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AttendanceCheckerSystem.Models.Meeting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>CIDM 3312 01</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MeetingDay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MeetingLocation)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @if (item.MeetingDay < DateTime.Now)
+                {
+                   <a asp-action="Details" asp-route-id="@item.ID"><span class="mdate">@item.MeetingDay.ToLongDateString()</span></a>
+                }
+                else
+                {
+                    <span class="mdate">@item.MeetingDay.ToLongDateString()</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingLocation)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

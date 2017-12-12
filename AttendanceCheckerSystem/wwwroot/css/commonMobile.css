@@ -1,0 +1,6 @@
+body { min-width: 320px; }
+#branding img { display: none; }
+#branding span.mobileOnly { display: inline-block; color: #ffffff; margin: 0.5em; }
+#betweenMargins { margin-left: 2%; margin-right: 2%; }
+#footer { line-height: 200%; }
+#footer li { display: block; text-align: center; border: none; }

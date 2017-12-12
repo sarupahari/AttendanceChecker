@@ -1,0 +1,12 @@
+﻿@model StudentAttendanceConfirmedViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "StudentAttendanceConfirmed";
+}
+
+<h2>Student Attendance Confirmed</h2>
+<p>for <strong>@Model.StudentName</strong></p>
+<p>on <strong>@Model.DateAttended.ToLongDateString()</strong></p>
+<p><a asp-controller="Home" asp-action="Index">Return To Main</a></p>
