@@ -1,0 +1,13 @@
+﻿@model AttendanceCheckerSystem.Models.SearchInputModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-controller="Meetings" asp-action ="SearchResults" method="post">
+    <label asp-for="SearchFirstName"></label>
+    <input asp-for="SearchFirstName" type="text" /><br/>
+    <label asp-for="SearchLastName"></label>
+    <input asp-for="SearchLastName" type="text" /><br />
+    <input type="submit" value="submit"/><br/>
+</form>
